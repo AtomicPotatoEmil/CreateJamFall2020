@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/whiskey_hightlight.png-0e6bea634c66912a1e243b6153b08256.stex"
+path="res://.import/whiskey.png-cc511dc8ecf45d1342cf1c7b5660401a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Potion_Bench/assets/whiskey_hightlight.png"
-dest_files=[ "res://.import/whiskey_hightlight.png-0e6bea634c66912a1e243b6153b08256.stex" ]
+source_file="res://PotionTable/assets/whiskey.png"
+dest_files=[ "res://.import/whiskey.png-cc511dc8ecf45d1342cf1c7b5660401a.stex" ]
 
 [params]
 

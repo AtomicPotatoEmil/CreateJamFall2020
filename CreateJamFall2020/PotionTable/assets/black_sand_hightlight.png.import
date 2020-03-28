@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/rose_hightlight.png-d591f3b8ab54ef3b328b5f02c6d0aaea.stex"
+path="res://.import/black_sand_hightlight.png-fe37ceb34a0ca3e20054cc465d7da9ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Potion_Bench/assets/rose_hightlight.png"
-dest_files=[ "res://.import/rose_hightlight.png-d591f3b8ab54ef3b328b5f02c6d0aaea.stex" ]
+source_file="res://PotionTable/assets/black_sand_hightlight.png"
+dest_files=[ "res://.import/black_sand_hightlight.png-fe37ceb34a0ca3e20054cc465d7da9ce.stex" ]
 
 [params]
 

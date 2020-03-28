@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Milk_highlight.png-610cac24eec6a841c605da47db00764d.stex"
+path="res://.import/black_sand_2.png-83298720ce68d46ea0642b7af61819a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Potion_Bench/assets/Milk_highlight.png"
-dest_files=[ "res://.import/Milk_highlight.png-610cac24eec6a841c605da47db00764d.stex" ]
+source_file="res://PotionTable/assets/black_sand_2.png"
+dest_files=[ "res://.import/black_sand_2.png-83298720ce68d46ea0642b7af61819a1.stex" ]
 
 [params]
 
