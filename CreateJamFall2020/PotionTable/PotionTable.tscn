@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://PotionTable/assets/black_sand_hightlight.png" type="Texture" id=1]
 [ext_resource path="res://PotionTable/PotionTable.gd" type="Script" id=2]
@@ -13,6 +13,8 @@
 [ext_resource path="res://PotionTable/assets/frog_legs_2.png" type="Texture" id=11]
 [ext_resource path="res://PotionTable/assets/Buffalo_Tooth_h.png" type="Texture" id=12]
 [ext_resource path="res://PotionTable/assets/Buffalo_Tooth.png" type="Texture" id=13]
+[ext_resource path="res://PotionTable/assets/Mixing_Bottle.png" type="Texture" id=14]
+[ext_resource path="res://PotionTable/assets/Bottle_Filling.png" type="Texture" id=15]
 
 [node name="PotionTable" type="Node2D"]
 script = ExtResource( 2 )
@@ -77,15 +79,37 @@ __meta__ = {
 }
 
 [node name="BuffaloTooth" type="TextureButton" parent="."]
-margin_left = 347.632
-margin_top = 143.299
-margin_right = 387.632
-margin_bottom = 196.299
+margin_left = 92.3802
+margin_top = 121.24
+margin_right = 132.38
+margin_bottom = 174.24
 texture_normal = ExtResource( 13 )
 texture_hover = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PotionBottle" type="Node2D" parent="."]
+position = Vector2( 327.631, 135.647 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="PotionBottle"]
+margin_left = -37.1442
+margin_top = -23.523
+margin_right = 35.8558
+margin_bottom = 54.477
+max_value = 3.0
+value = 3.0
+texture_progress = ExtResource( 15 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Bottle" type="Sprite" parent="PotionBottle"]
+texture = ExtResource( 14 )
 [connection signal="pressed" from="Milk" to="." method="_on_Milk_pressed"]
 [connection signal="pressed" from="Rose" to="." method="_on_Rose_pressed"]
 [connection signal="pressed" from="Whiskey" to="." method="_on_Whiskey_pressed"]
