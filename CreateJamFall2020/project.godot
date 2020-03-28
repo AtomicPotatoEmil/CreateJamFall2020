@@ -19,10 +19,16 @@ config/name="CreateJamFall2020"
 run/main_scene="res://StartMenu/StartMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Potion="*res://Potion.gd"
+
 [display]
 
 window/size/width=640
 window/size/height=400
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
 
 [rendering]
 
