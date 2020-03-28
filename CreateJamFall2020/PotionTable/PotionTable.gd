@@ -27,3 +27,15 @@ func _on_BlackSand_pressed():
 	POTION.black_sand = true
 	numberOfItemsClicked += 1
 	pass
+
+
+func _on_FrogLegs_pressed():
+	POTION.frog_legs = true
+	numberOfItemsClicked += 1
+	pass 
+
+
+func _on_BuffaloTooth_pressed():
+	POTION.buffalo_tooth = true
+	numberOfItemsClicked += 1
+	pass 
