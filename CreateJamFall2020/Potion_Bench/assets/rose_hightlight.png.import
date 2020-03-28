@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/rose_hightlight.png-d591f3b8ab54ef3b328b5f02c6d0aaea.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Potion_Bench/assets/rose_hightlight.png"
+dest_files=[ "res://.import/rose_hightlight.png-d591f3b8ab54ef3b328b5f02c6d0aaea.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
