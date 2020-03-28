@@ -7,9 +7,9 @@
 [ext_resource path="res://StartMenu/assets/play-knap-h.png" type="Texture" id=5]
 [ext_resource path="res://StartMenu/StartMenu.gd" type="Script" id=6]
 [ext_resource path="res://StartMenu/assets/Menu Music.wav" type="AudioStream" id=7]
-[ext_resource path="res://StartMenu/assets/Back-h.png" type="Texture" id=8]
-[ext_resource path="res://StartMenu/assets/Back.png" type="Texture" id=9]
-[ext_resource path="res://StartMenu/assets/Credit_Screen.png" type="Texture" id=10]
+[ext_resource path="res://StartMenu/assets/Credit_Screen.png" type="Texture" id=8]
+[ext_resource path="res://StartMenu/assets/Back-h.png" type="Texture" id=9]
+[ext_resource path="res://StartMenu/assets/Back.png" type="Texture" id=10]
 
 [node name="StartMenu" type="Control"]
 anchor_right = 1.0
@@ -19,7 +19,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="bg" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
 
@@ -41,24 +41,21 @@ margin_right = 442.4
 margin_bottom = 332.05
 texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 
 [node name="CreditScreen" type="Sprite" parent="."]
-texture = ExtResource( 10 )
+texture = ExtResource( 8 )
 centered = false
 
 [node name="Back" type="TextureButton" parent="."]
-margin_left = 355.0
-margin_top = 243.0
-margin_right = 596.0
-margin_bottom = 329.0
-texture_normal = ExtResource( 9 )
-texture_hover = ExtResource( 8 )
+margin_left = 356.488
+margin_top = 236.455
+margin_right = 597.488
+margin_bottom = 322.455
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
