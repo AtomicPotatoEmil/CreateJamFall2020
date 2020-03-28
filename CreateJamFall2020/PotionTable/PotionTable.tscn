@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://PotionTable/assets/black_sand_hightlight.png" type="Texture" id=1]
 [ext_resource path="res://PotionTable/PotionTable.gd" type="Script" id=2]
@@ -15,15 +15,21 @@
 [ext_resource path="res://PotionTable/assets/Buffalo_Tooth.png" type="Texture" id=13]
 [ext_resource path="res://PotionTable/assets/Mixing_Bottle.png" type="Texture" id=14]
 [ext_resource path="res://PotionTable/assets/Bottle_Filling.png" type="Texture" id=15]
+[ext_resource path="res://PotionTable/assets/Alchemist_Table.png" type="Texture" id=16]
+[ext_resource path="res://Bar sound with Jazz.wav" type="AudioStream" id=17]
 
 [node name="PotionTable" type="Node2D"]
 script = ExtResource( 2 )
 
+[node name="bg" type="Sprite" parent="."]
+texture = ExtResource( 16 )
+centered = false
+
 [node name="Milk" type="TextureButton" parent="."]
-margin_left = 170.438
-margin_top = 203.316
-margin_right = 342.438
-margin_bottom = 595.316
+margin_left = 179.869
+margin_top = 233.324
+margin_right = 351.869
+margin_bottom = 625.324
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 6 )
@@ -32,10 +38,10 @@ __meta__ = {
 }
 
 [node name="Rose" type="TextureButton" parent="."]
-margin_left = 284.332
-margin_top = 234.183
-margin_right = 471.332
-margin_bottom = 519.183
+margin_left = 457.679
+margin_top = 260.845
+margin_right = 644.679
+margin_bottom = 545.845
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 4 )
 texture_hover = ExtResource( 8 )
@@ -44,10 +50,10 @@ __meta__ = {
 }
 
 [node name="Whiskey" type="TextureButton" parent="."]
-margin_left = 408.629
-margin_top = 245.748
-margin_right = 562.629
-margin_bottom = 489.748
+margin_left = 386.337
+margin_top = 275.756
+margin_right = 540.337
+margin_bottom = 519.756
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 7 )
@@ -56,10 +62,10 @@ __meta__ = {
 }
 
 [node name="BlackSand" type="TextureButton" parent="."]
-margin_left = 524.394
-margin_top = 247.394
-margin_right = 756.394
-margin_bottom = 491.394
+margin_left = 539.827
+margin_top = 242.25
+margin_right = 771.827
+margin_bottom = 486.25
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 1 )
@@ -68,10 +74,10 @@ __meta__ = {
 }
 
 [node name="FrogLegs" type="TextureButton" parent="."]
-margin_left = 41.1321
-margin_top = 248.783
-margin_right = 105.132
-margin_bottom = 312.783
+margin_left = 31.7009
+margin_top = 292.509
+margin_right = 95.7009
+margin_bottom = 356.509
 texture_normal = ExtResource( 11 )
 texture_hover = ExtResource( 10 )
 __meta__ = {
@@ -79,10 +85,10 @@ __meta__ = {
 }
 
 [node name="BuffaloTooth" type="TextureButton" parent="."]
-margin_left = 92.3802
-margin_top = 121.24
-margin_right = 132.38
-margin_bottom = 174.24
+margin_left = 104.383
+margin_top = 266.137
+margin_right = 144.383
+margin_bottom = 319.137
 texture_normal = ExtResource( 13 )
 texture_hover = ExtResource( 12 )
 __meta__ = {
@@ -90,7 +96,7 @@ __meta__ = {
 }
 
 [node name="PotionBottle" type="Node2D" parent="."]
-position = Vector2( 327.631, 135.647 )
+position = Vector2( 321.644, 202.107 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -110,6 +116,9 @@ __meta__ = {
 
 [node name="Bottle" type="Sprite" parent="PotionBottle"]
 texture = ExtResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
 [connection signal="pressed" from="Milk" to="." method="_on_Milk_pressed"]
 [connection signal="pressed" from="Rose" to="." method="_on_Rose_pressed"]
 [connection signal="pressed" from="Whiskey" to="." method="_on_Whiskey_pressed"]

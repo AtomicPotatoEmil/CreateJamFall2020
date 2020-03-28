@@ -1,0 +1,42 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Player/sprites/Walk5C.png" type="Texture" id=1]
+[ext_resource path="res://Player/sprites/walk3C.png" type="Texture" id=2]
+[ext_resource path="res://Player/sprites/walk2C.png" type="Texture" id=3]
+[ext_resource path="res://Player/sprites/walk1C.png" type="Texture" id=4]
+[ext_resource path="res://Player/sprites/Walk4C.png" type="Texture" id=5]
+[ext_resource path="res://Player/Player.gd" type="Script" id=6]
+[ext_resource path="res://Player/sprites/CharIdle2.png" type="Texture" id=7]
+[ext_resource path="res://Player/sprites/CharIdle1.png" type="Texture" id=8]
+[ext_resource path="res://Player/sprites/CharIdle4.png" type="Texture" id=9]
+[ext_resource path="res://Player/sprites/CharIdle3.png" type="Texture" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 28.2884 )
+
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
+script = ExtResource( 6 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.6161, 4.2809 )
+shape = SubResource( 2 )
