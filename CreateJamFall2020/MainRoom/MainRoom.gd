@@ -122,10 +122,28 @@ func _on_RedLady_talk():
 
 
 func _on_LightBowlerhatGuy_talk():
-	GameState.is_talking_to_LightBowlerhatGuy = true
-	GameState.is_talking = true
-	$Dialogue.text = Dialogue.LightBowlerhatGuy_Dialogue["greetings"]
-	$WalkAway.show()
-	if GameState.has_potion == true:
-		$GivePotion.show()
+	match GameState.LightBowlerhatGuy_status:
+		"normal":
+			GameState.is_talking_to_LightBowlerhatGuy = true
+			GameState.is_talking = true
+			$Dialogue.text = Dialogue.LightBowlerhatGuy_Dialogue["greetings"]
+			$WalkAway.show()
+			if GameState.has_potion == true:
+				$GivePotion.show()
+		"zombie":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["zombie"]
+			$WalkAway.show()
+		"skeleton":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["skeleton"]
+			$WalkAway.show()
+		"fat":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["fat"]
+			$WalkAway.show()
+		"thin":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["thin"]
+			$WalkAway.show()
+		"hot":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["hot"]
+			$WalkAway.show()
+		
 	pass 
