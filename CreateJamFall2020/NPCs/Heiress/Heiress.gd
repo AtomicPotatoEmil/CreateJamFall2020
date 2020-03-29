@@ -14,3 +14,4 @@ func _physics_process(delta):
 		if $RayCast2D.get_collider().is_in_group("player") and GameState.is_talking == false: 
 			$PressSpace.show()
 	pass
+
