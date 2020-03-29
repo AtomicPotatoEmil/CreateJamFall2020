@@ -19,9 +19,8 @@ var Heiress_Dialogue = {
 	"skeleton": "GOOOODBYE PERIODS! WOOOHOOO!",
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
-	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop",
-	"octopus": "To some people this is considered attractive"
+	"hot": "I can barely balance myself now!",
+	"goop": "I guess your heart desired goop"
 }
 
 var Singer_Dialogue = {

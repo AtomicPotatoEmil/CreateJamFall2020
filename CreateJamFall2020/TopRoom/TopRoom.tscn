@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://TopRoom/Top_room.png" type="Texture" id=1]
 [ext_resource path="res://Bar sound with Jazz.wav" type="AudioStream" id=2]
@@ -9,6 +9,12 @@
 [ext_resource path="res://UI_elements/w_key.png" type="Texture" id=7]
 [ext_resource path="res://NPCs/Singer/Singer.tscn" type="PackedScene" id=8]
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/DarkBowlerhatGuy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI_elements/next-h.png" type="Texture" id=10]
+[ext_resource path="res://UI_elements/walk-a-way.png" type="Texture" id=11]
+[ext_resource path="res://UI_elements/walk-away.png" type="Texture" id=12]
+[ext_resource path="res://UI_elements/offer-potion.png" type="Texture" id=13]
+[ext_resource path="res://UI_elements/next.png" type="Texture" id=14]
+[ext_resource path="res://UI_elements/offer-potion-h.png" type="Texture" id=15]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 361.895, 10 )
@@ -72,3 +78,54 @@ texture = ExtResource( 7 )
 position = Vector2( 629.873, 374.38 )
 rotation = 1.5708
 enabled = true
+
+[node name="WalkAway" type="TextureButton" parent="."]
+margin_left = 214.337
+margin_top = 348.201
+margin_right = 455.337
+margin_bottom = 434.201
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GivePotion" type="TextureButton" parent="."]
+margin_left = 351.296
+margin_top = 347.427
+margin_right = 592.296
+margin_bottom = 433.427
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 276.294
+margin_top = 347.175
+margin_right = 517.294
+margin_bottom = 433.175
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 14 )
+texture_hover = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Dialogue" type="Label" parent="."]
+margin_left = 5.505
+margin_top = 314.003
+margin_right = 45.505
+margin_bottom = 328.003
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="talk" from="Heiress" to="." method="_on_Heiress_talk"]
+[connection signal="talk" from="Singer" to="." method="_on_Singer_talk"]
+[connection signal="talk" from="DarkBowlerhatGuy" to="." method="_on_DarkBowlerhatGuy_talk"]
+[connection signal="pressed" from="WalkAway" to="." method="_on_WalkAway_pressed"]
+[connection signal="pressed" from="GivePotion" to="." method="_on_GivePotion_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]

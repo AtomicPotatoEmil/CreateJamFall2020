@@ -13,3 +13,6 @@ var DarkBowlerhatGuy_status = "normal"
 
 var is_talking_to_RedLady = false
 var is_talking_to_LightBowlerhatGuy = false
+var is_talking_to_Heiress = false
+var is_talking_to_DarkBowlerhatGuy = false
+var is_talking_to_Singer = false
