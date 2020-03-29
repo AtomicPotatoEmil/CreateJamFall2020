@@ -60,6 +60,25 @@ func _on_GivePotion_pressed():
 		$WalkAway.hide()
 		$GivePotion.hide()
 		$Next.show()
+	if GameState.is_talking_to_LightBowlerhatGuy == true:
+		$Next.hide()
+		$Dialogue.text = ""
+		$WalkAway.hide()
+		$GivePotion.hide()
+		GameState.is_talking = false
+		if GameState.LightBowlerhatGuy_status == "normal":
+			match Potion.EFFECT:
+				"ZOMBIE_TF":
+					GameState.LightBowlerhatGuy_status = "zombie"
+				"SKELETON_TF":
+					GameState.LightBowlerhatGuy_status = "skeleton"
+				"FAT":
+					GameState.LightBowlerhatGuy_status = "fat"
+				"THIN":
+					GameState.LightBowlerhatGuy_status = "thin"
+				"SHAPE_ENHANCEMENT":
+					GameState.LightBowlerhatGuy_status = "hot"
+		
 	pass 
 
 
