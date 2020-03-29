@@ -69,3 +69,9 @@ position = Vector2( 346.645, 360.89 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 80 )
+
+[node name="DoorSpawnSpot" type="Position2D" parent="."]
+position = Vector2( 599.874, 352.168 )
+
+[node name="StairCaseSpawnSpot" type="Position2D" parent="."]
+position = Vector2( 388.74, 349.937 )

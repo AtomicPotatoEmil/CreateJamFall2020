@@ -23,6 +23,7 @@ func _physics_process(delta):
 		$Door/W.hide()
 	elif $Door/RayCast2D.is_colliding():
 		if $Door/RayCast2D.get_collider().is_in_group("player"):
+			GameState.player_position = "MainRoomDoor"
 			$Door/W.show()
 	
 	if $Door/RayCast2D.is_colliding():

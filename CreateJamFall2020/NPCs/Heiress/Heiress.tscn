@@ -1,16 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://NPCs/Heiress/sprites/heiress1idle.png" type="Texture" id=1]
 [ext_resource path="res://NPCs/Heiress/sprites/heiress2idle.png" type="Texture" id=2]
 [ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=3]
 [ext_resource path="res://NPCs/Heiress/Heiress.gd" type="Script" id=4]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_5.png" type="Texture" id=5]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_4.png" type="Texture" id=6]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_6.png" type="Texture" id=7]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_1.png" type="Texture" id=8]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_0.png" type="Texture" id=9]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_3.png" type="Texture" id=10]
-[ext_resource path="res://NPCs/Heiress/sprites/finebrunetteladyzombie_2.png" type="Texture" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,11 +11,6 @@ animations = [ {
 "loop": true,
 "name": "normal",
 "speed": 2.0
-}, {
-"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "zombie",
-"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -34,7 +22,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "zombie"
-frame = 4
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -1,6 +1,10 @@
 extends Node2D
 
 func _ready():
+	if GameState.player_position == "MainRoomDoor":
+		$Player.position = $DoorSpawnSpot.global_position
+	elif GameState.player_position == "Staircase":
+		$Player.position = $StairCaseSpawnSpot.global_position
 	$AudioStreamPlayer.play()
 	pass
 
@@ -13,6 +17,6 @@ func _physics_process(delta):
 			$Staircase/W.show()
 	
 	if $Staircase/Raycast2D.is_colliding():
-		if $Staircase/Raycast2D.get_collider().is_in_group("player") and Input.is_action_pressed("W"):
+		if $Staircase/Raycast2D.get_collider().is_in_group("player") and Input.is_action_just_pressed("W"):
 			get_tree().change_scene("res://TopRoom/TopRoom.tscn")
 	pass
