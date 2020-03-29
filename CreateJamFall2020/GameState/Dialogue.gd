@@ -47,5 +47,8 @@ var LightBowlerhatGuy_Dialogue = {
 	"greetings": "Wow man look at us... we’re almost identical!",
 	"zombie": "Most zombies prefer brains, but i’m more of a feet-fan so to speak",
 	"skeleton": "I wonder if I can still pee…. God i’m gonna miss masturbating",
+	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
+	"thin": "Oh yeah! Skinny as a supermodel",
+	"hot": "I’m a perfect 5/7!",
 	"goop": "I guess your heart desired goop"
 }

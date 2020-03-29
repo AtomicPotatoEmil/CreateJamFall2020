@@ -60,17 +60,6 @@ func _on_GivePotion_pressed():
 		$WalkAway.hide()
 		$GivePotion.hide()
 		$Next.show()
-	if GameState.is_talking_to_LightBowlerhatGuy == true:
-		$Next.hide()
-		$Dialogue.text = ""
-		$WalkAway.hide()
-		$GivePotion.hide()
-		GameState.is_talking = false
-		if GameState.LightBowlerhatGuy_status == "normal":
-			match Potion.EFFECT:
-				"ZOMBIE_TF":
-					GameState.LightBowlerhatGuy_status = "zombie"
-	
 	pass 
 
 
