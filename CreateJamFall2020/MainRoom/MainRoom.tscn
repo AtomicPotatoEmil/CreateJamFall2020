@@ -69,3 +69,32 @@ position = Vector2( 346.645, 360.89 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 80 )
+
+[node name="DoorSpawnSpot" type="Position2D" parent="."]
+position = Vector2( 599.874, 352.168 )
+
+[node name="StairCaseSpawnSpot" type="Position2D" parent="."]
+position = Vector2( 388.74, 349.937 )
+
+[node name="Door" type="Node" parent="."]
+
+[node name="W" type="Sprite" parent="Door"]
+position = Vector2( 612.514, 293.905 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Door"]
+position = Vector2( 632.123, 360.394 )
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 0, 30 )
+
+[node name="Dialogue" type="Label" parent="."]
+margin_left = 281.006
+margin_top = 120.547
+margin_right = 321.006
+margin_bottom = 134.547
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
