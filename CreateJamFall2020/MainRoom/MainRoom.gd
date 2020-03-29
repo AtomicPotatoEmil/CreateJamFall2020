@@ -1,10 +1,6 @@
 extends Node2D
 
-
-var Dialogue = {
-	"RedLady_greetings": "Hello handsome <3",
-}
-
+onready var Dialogue = get_node("/root/Dialogue")
 
 
 func _ready():
@@ -13,10 +9,13 @@ func _ready():
 	elif GameState.player_position == "Staircase":
 		$Player.position = $StairCaseSpawnSpot.global_position
 	$AudioStreamPlayer.play()
+	
+	$GivePotion.hide()
 	pass
 
 
 func _physics_process(delta):
+	
 	if $Staircase/Raycast2D.is_colliding() == false:
 		$Staircase/W.hide()
 	elif $Staircase/Raycast2D.is_colliding():
@@ -38,3 +37,15 @@ func _physics_process(delta):
 		if $Door/RayCast2D.get_collider().is_in_group("player") and Input.is_action_just_pressed("W"):
 			get_tree().change_scene("res://WizardWorksShop/WizardWorkshop.tscn")
 	pass
+
+
+func _on_RedLady_talk():
+	GameState.is_talking_to_RedLady = true
+	GameState.is_talking = true
+	$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
+	$GivePotion.show()
+	pass 
+
+
+func _on_GivePotion_pressed():
+	pass 

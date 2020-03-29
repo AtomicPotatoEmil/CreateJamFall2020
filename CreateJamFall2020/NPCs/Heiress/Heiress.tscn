@@ -4,19 +4,19 @@
 [ext_resource path="res://NPCs/Heiress/sprites/heiress2idle.png" type="Texture" id=2]
 [ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=3]
 [ext_resource path="res://NPCs/Heiress/Heiress.gd" type="Script" id=4]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_1.png" type="Texture" id=5]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_4.png" type="Texture" id=6]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_0.png" type="Texture" id=7]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_2.png" type="Texture" id=8]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_3.png" type="Texture" id=9]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_5.png" type="Texture" id=10]
-[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_6.png" type="Texture" id=11]
-[ext_resource path="res://NPCs/globalsprites/skeleton_3.png" type="Texture" id=12]
-[ext_resource path="res://NPCs/globalsprites/skeleton_1.png" type="Texture" id=13]
-[ext_resource path="res://NPCs/globalsprites/skeleton_0.png" type="Texture" id=14]
-[ext_resource path="res://NPCs/globalsprites/skeleton_4.png" type="Texture" id=15]
-[ext_resource path="res://NPCs/globalsprites/skeleton_5.png" type="Texture" id=16]
-[ext_resource path="res://NPCs/globalsprites/skeleton_2.png" type="Texture" id=17]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_6.png" type="Texture" id=5]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_5.png" type="Texture" id=6]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_3.png" type="Texture" id=7]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_4.png" type="Texture" id=8]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_2.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_1.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_0.png" type="Texture" id=11]
+[ext_resource path="res://NPCs/Heiress/sprites/Heiress2THin.png" type="Texture" id=12]
+[ext_resource path="res://NPCs/Heiress/sprites/Heiress1THIN.png" type="Texture" id=13]
+[ext_resource path="res://NPCs/Heiress/sprites/heiressFAT2.png" type="Texture" id=14]
+[ext_resource path="res://NPCs/Heiress/sprites/heiressFAT1.png" type="Texture" id=15]
+[ext_resource path="res://NPCs/Heiress/sprites/Heiress1HOT.png" type="Texture" id=16]
+[ext_resource path="res://NPCs/Heiress/sprites/Heiress2HOT.png" type="Texture" id=17]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -25,12 +25,22 @@ animations = [ {
 "name": "normal",
 "speed": 2.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "skeleton",
-"speed": 5.0
+"name": "fat",
+"speed": 3.0
 }, {
-"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "skinny",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "hot",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "zombie",
 "speed": 5.0
@@ -44,8 +54,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "normal"
-frame = 1
+animation = "hot"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
