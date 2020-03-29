@@ -10,7 +10,10 @@ func _ready():
 		$Player.position = $StairCaseSpawnSpot.global_position
 	$AudioStreamPlayer.play()
 	
+	$WalkAway.hide()
 	$GivePotion.hide()
+	$Next.hide()
+	
 	pass
 
 
@@ -39,13 +42,39 @@ func _physics_process(delta):
 	pass
 
 
-func _on_RedLady_talk():
-	GameState.is_talking_to_RedLady = true
-	GameState.is_talking = true
-	$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
-	$GivePotion.show()
+
+
+
+func _on_WalkAway_pressed():
+	GameState.is_talking = false
+	$WalkAway.hide()
+	$GivePotion.hide()
+	$Dialogue.text = ""
 	pass 
 
 
 func _on_GivePotion_pressed():
+	if GameState.is_talking_to_RedLady == true:
+		$Dialogue.text = Dialogue.RedLady_Dialogue["Smalltalk"]
+		$WalkAway.hide()
+		$GivePotion.hide()
+		$Next.show()
+	pass 
+
+
+func _on_Next_pressed():
+	if GameState.RedLady_status == "normal":
+		match Potion.EFFECT:
+			"ZOMBIE_TF":
+				GameState.RedLady_status = "zombie"
+	pass 
+
+
+func _on_RedLady_talk():
+	GameState.is_talking_to_RedLady = true
+	GameState.is_talking = true
+	$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
+	$WalkAway.show()
+	if GameState.has_potion == true:
+		$GivePotion.show()
 	pass 

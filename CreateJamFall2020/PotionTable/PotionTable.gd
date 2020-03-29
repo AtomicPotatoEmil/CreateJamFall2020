@@ -25,6 +25,7 @@ func _physics_process(delta):
 	
 	if numberOfItemsClicked == 3:
 		get_tree().change_scene("res://WizardWorksShop/WizardWorkshop.tscn")
+		GameState.has_potion = true
 	
 	print(POTION.EFFECT)
 	pass
