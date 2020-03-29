@@ -4,6 +4,16 @@
 [ext_resource path="res://NPCs/Heiress/sprites/heiress2idle.png" type="Texture" id=2]
 [ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=3]
 [ext_resource path="res://NPCs/Heiress/Heiress.gd" type="Script" id=4]
+<<<<<<< Updated upstream
+=======
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_1.png" type="Texture" id=5]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_4.png" type="Texture" id=6]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_0.png" type="Texture" id=7]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_2.png" type="Texture" id=8]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_3.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_5.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/Heiress/sprites/zombieheiress_6.png" type="Texture" id=11]
+>>>>>>> Stashed changes
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -11,6 +21,14 @@ animations = [ {
 "loop": true,
 "name": "normal",
 "speed": 2.0
+<<<<<<< Updated upstream
+=======
+}, {
+"frames": [ ExtResource( 7 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "zombie",
+"speed": 5.0
+>>>>>>> Stashed changes
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
