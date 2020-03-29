@@ -10,6 +10,16 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	if GameState.Singer == "normal":
+		$AnimatedSprite.play("normal")
+	if GameState.Singer == "zombie":
+		$AnimatedSprite.play("zombie")
+	if GameState.Singer == "fat":
+		$AnimatedSprite.play("fat")
+	if GameState.Singer == "hot":
+		$AnimatedSprite.play("hot")
+	if GameState.Singer == "skinny":
+		$AnimatedSprite.play("skinny")
 	
 	if $RayCast2D.is_colliding() == false:
 		$PressSpace.hide()

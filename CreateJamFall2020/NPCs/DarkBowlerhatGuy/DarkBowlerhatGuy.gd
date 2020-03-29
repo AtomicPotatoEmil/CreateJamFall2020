@@ -9,6 +9,16 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	if GameState.DarkBowlerhatGuy == "normal":
+		$AnimatedSprite.play("normal")
+	if GameState.DarkBowlerhatGuy == "zombie":
+		$AnimatedSprite.play("zombie")
+	if GameState.DarkBowlerhatGuy == "fat":
+		$AnimatedSprite.play("fat")
+	if GameState.DarkBowlerhatGuy == "hot":
+		$AnimatedSprite.play("hot")
+	if GameState.DarkBowlerhatGuy == "skinny":
+		$AnimatedSprite.play("skinny")
 	
 	if $RayCast2D.is_colliding() == false:
 		$PressSpace.hide()
