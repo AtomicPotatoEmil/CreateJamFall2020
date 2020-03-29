@@ -59,6 +59,17 @@ func _on_GivePotion_pressed():
 		$WalkAway.hide()
 		$GivePotion.hide()
 		$Next.show()
+	if GameState.is_talking_to_LightBowlerhatGuy == true:
+		$Next.hide()
+		$Dialogue.text = ""
+		$WalkAway.hide()
+		$GivePotion.hide()
+		GameState.is_talking = false
+		if GameState.LightBowlerhatGuy_status == "normal":
+			match Potion.EFFECT:
+				"ZOMBIE_TF":
+					GameState.LightBowlerhatGuy_status = "zombie"
+	
 	pass 
 
 
@@ -67,6 +78,10 @@ func _on_Next_pressed():
 		match Potion.EFFECT:
 			"ZOMBIE_TF":
 				GameState.RedLady_status = "zombie"
+
+	$Next.hide()
+	$Dialogue.text = ""
+	GameState.is_talking = false
 	pass 
 
 
@@ -74,6 +89,16 @@ func _on_RedLady_talk():
 	GameState.is_talking_to_RedLady = true
 	GameState.is_talking = true
 	$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
+	$WalkAway.show()
+	if GameState.has_potion == true:
+		$GivePotion.show()
+	pass 
+
+
+func _on_LightBowlerhatGuy_talk():
+	GameState.is_talking_to_LightBowlerhatGuy = true
+	GameState.is_talking = true
+	$Dialogue.text = Dialogue.LightBowlerhatGuy_Dialogue["greetings"]
 	$WalkAway.show()
 	if GameState.has_potion == true:
 		$GivePotion.show()

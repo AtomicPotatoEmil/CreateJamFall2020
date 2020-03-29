@@ -12,3 +12,4 @@ var LightBowlerhatGuy_status = "normal"
 var DarkBowlerhatGuy = "normal"
 
 var is_talking_to_RedLady = false
+var is_talking_to_LightBowlerhatGuy = false
