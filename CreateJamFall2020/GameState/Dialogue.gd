@@ -8,7 +8,8 @@ var RedLady_Dialogue = {
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop"
+	"goop": "I guess your heart desired goop",
+	"octopus": "To some people this is considered attractive"
 }
 
 var Heiress_Dialogue = {
@@ -19,7 +20,8 @@ var Heiress_Dialogue = {
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop"
+	"goop": "I guess your heart desired goop",
+	"octopus": "To some people this is considered attractive"
 }
 
 var Singer_Dialogue = {
@@ -29,7 +31,8 @@ var Singer_Dialogue = {
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop"
+	"goop": "I guess your heart desired goop",
+	"octopus": "To some people this is considered attractive"
 }
 
 var DarkBowlerhatGuy_Dialogue = {
@@ -40,7 +43,8 @@ var DarkBowlerhatGuy_Dialogue = {
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop"
+	"goop": "I guess your heart desired goop",
+	"octopus": "To some people this is considered attractive"
 }
 
 var LightBowlerhatGuy_Dialogue = {
@@ -50,5 +54,6 @@ var LightBowlerhatGuy_Dialogue = {
 	"fat": "Oh boy I feel bloated...  I wouldn’t mind a snack though",
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I’m a perfect 5/7!",
-	"goop": "I guess your heart desired goop"
+	"goop": "I guess your heart desired goop",
+	"octopus": "To some people this is considered attractive"
 }
