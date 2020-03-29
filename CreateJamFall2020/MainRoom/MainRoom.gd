@@ -54,6 +54,7 @@ func _on_WalkAway_pressed():
 
 
 func _on_GivePotion_pressed():
+	GameState.has_potion = false
 	if GameState.is_talking_to_RedLady == true:
 		$Dialogue.text = Dialogue.RedLady_Dialogue["Smalltalk"]
 		$WalkAway.hide()
@@ -78,6 +79,14 @@ func _on_Next_pressed():
 		match Potion.EFFECT:
 			"ZOMBIE_TF":
 				GameState.RedLady_status = "zombie"
+			"SKELETON_TF":
+				GameState.RedLady_status = "skeleton"
+			"FAT":
+				GameState.RedLady_status = "fat"
+			"THIN":
+				GameState.RedLady_status = "thin"
+			"SHAPE_ENHANCEMENT":
+				GameState.RedLady_status = "hot"
 
 	$Next.hide()
 	$Dialogue.text = ""
@@ -86,12 +95,29 @@ func _on_Next_pressed():
 
 
 func _on_RedLady_talk():
-	GameState.is_talking_to_RedLady = true
-	GameState.is_talking = true
-	$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
-	$WalkAway.show()
-	if GameState.has_potion == true:
-		$GivePotion.show()
+	match GameState.RedLady_status:
+		"normal":
+			GameState.is_talking_to_RedLady = true
+			GameState.is_talking = true
+			$Dialogue.text = Dialogue.RedLady_Dialogue["greetings"]
+			$WalkAway.show()
+			if GameState.has_potion == true:
+				$GivePotion.show()
+		"zombie":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["zombie"]
+			$WalkAway.show()
+		"skeleton":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["skeleton"]
+			$WalkAway.show()
+		"fat":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["fat"]
+			$WalkAway.show()
+		"thin":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["thin"]
+			$WalkAway.show()
+		"hot":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["hot"]
+			$WalkAway.show()
 	pass 
 
 
