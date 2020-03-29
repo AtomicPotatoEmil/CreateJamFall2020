@@ -78,6 +78,8 @@ func _on_GivePotion_pressed():
 					GameState.LightBowlerhatGuy_status = "thin"
 				"SHAPE_ENHANCEMENT":
 					GameState.LightBowlerhatGuy_status = "hot"
+				"OCTOPUS_TF":
+					GameState.LightBowlerhatGuy_status = "octopus"
 		
 	pass 
 
@@ -95,6 +97,8 @@ func _on_Next_pressed():
 				GameState.RedLady_status = "thin"
 			"SHAPE_ENHANCEMENT":
 				GameState.RedLady_status = "hot"
+			"OCTOPUS_TF":
+				GameState.RedLady_status = "octopus"
 
 	$Next.hide()
 	$Dialogue.text = ""
@@ -126,6 +130,9 @@ func _on_RedLady_talk():
 		"hot":
 			$Dialogue.text = Dialogue.RedLady_Dialogue["hot"]
 			$WalkAway.show()
+		"octopus":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["octopus"]
+			$WalkAway.show()
 	pass 
 
 
@@ -152,6 +159,9 @@ func _on_LightBowlerhatGuy_talk():
 			$WalkAway.show()
 		"hot":
 			$Dialogue.text = Dialogue.RedLady_Dialogue["hot"]
+			$WalkAway.show()
+		"octopus":
+			$Dialogue.text = Dialogue.RedLady_Dialogue["octopus"]
 			$WalkAway.show()
 		
 	pass 

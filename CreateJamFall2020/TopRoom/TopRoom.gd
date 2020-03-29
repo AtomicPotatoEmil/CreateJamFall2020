@@ -144,6 +144,8 @@ func _on_GivePotion_pressed():
 				GameState.Singer_status = "thin"
 			"SHAPE_ENHANCEMENT":
 				GameState.Singer_status = "hot"
+			"OCTOPUS_TF":
+				GameState.Singer_status = "octopus"
 		$Next.hide()
 		$Dialogue.text = ""
 		$WalkAway.hide()
@@ -164,6 +166,8 @@ func _on_Next_pressed():
 				GameState.Heiress_status = "thin"
 			"SHAPE_ENHANCEMENT":
 				GameState.Heiress_status = "hot"
+			"OCTOPUS_TF":
+				GameState.Heiress_status = "octopus"
 	
 	if GameState.DarkBowlerhatGuy_status == "normal":
 		match Potion.EFFECT:
@@ -177,6 +181,8 @@ func _on_Next_pressed():
 				GameState.DarkBowlerhatGuy_status = "thin"
 			"SHAPE_ENHANCEMENT":
 				GameState.DarkBowlerhatGuy_status = "hot"
+			"OCTOPUS_TF":
+				GameState.DarkBowlerhatGuy_status = "octopus"
 	$Next.hide()
 	$Dialogue.text = ""
 	GameState.is_talking = false

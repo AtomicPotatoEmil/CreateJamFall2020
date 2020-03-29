@@ -19,6 +19,8 @@ func _physics_process(delta):
 		$AnimatedSprite.play("skinny")
 	if GameState.RedLady_status == "skeleton":
 		$AnimatedSprite.play("skeleton")
+	if GameState.RedLady_status == "octupus":
+		$AnimatedSprite.play("octopus")
 	
 	if $RayCast2D.is_colliding() == false:
 		$PressSpace.hide()

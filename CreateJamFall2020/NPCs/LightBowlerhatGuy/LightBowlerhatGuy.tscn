@@ -25,19 +25,19 @@
 [ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/HOTLysHat1.png" type="Texture" id=23]
 [ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/LysHatTYK4.png" type="Texture" id=24]
 [ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/LightHatSKinny2.png" type="Texture" id=25]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/HOTLysHat4.png" type="Texture" id=26]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_0.png" type="Texture" id=27]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_2.png" type="Texture" id=28]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_3.png" type="Texture" id=29]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_1.png" type="Texture" id=30]
-[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=31]
-[ext_resource path="res://NPCs/globalsprites/octopus_5.png" type="Texture" id=32]
-[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=33]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_4.png" type="Texture" id=34]
-[ext_resource path="res://NPCs/globalsprites/octopus_1.png" type="Texture" id=35]
-[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=36]
-[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/curedsprite_5.png" type="Texture" id=37]
-[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=38]
+[ext_resource path="res://NPCs/LightBowlerhatGuy/sprites/LightHatSKinny1.png" type="Texture" id=26]
+[ext_resource path="res://NPCs/globalsprites/skeleton_5.png" type="Texture" id=27]
+[ext_resource path="res://NPCs/globalsprites/skeleton_4.png" type="Texture" id=28]
+[ext_resource path="res://NPCs/globalsprites/skeleton_1.png" type="Texture" id=29]
+[ext_resource path="res://NPCs/globalsprites/skeleton_3.png" type="Texture" id=30]
+[ext_resource path="res://NPCs/globalsprites/skeleton_2.png" type="Texture" id=31]
+[ext_resource path="res://NPCs/globalsprites/skeleton_0.png" type="Texture" id=32]
+[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=33]
+[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=34]
+[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=35]
+[ext_resource path="res://NPCs/globalsprites/octopus_5.png" type="Texture" id=36]
+[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=37]
+[ext_resource path="res://NPCs/globalsprites/octopus_1.png" type="Texture" id=38]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -75,6 +75,11 @@ animations = [ {
 "loop": true,
 "name": "hot",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 38 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "octopus",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -89,8 +94,8 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "cured"
-frame = 2
+animation = "octopus"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
