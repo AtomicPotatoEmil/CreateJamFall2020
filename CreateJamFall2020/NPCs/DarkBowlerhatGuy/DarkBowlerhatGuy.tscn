@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/darkbowleridle_4.png" type="Texture" id=1]
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/darkbowleridle_3.png" type="Texture" id=2]
@@ -21,22 +21,35 @@
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/darkbowlerzombie_1.png" type="Texture" id=19]
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/darkbowlerzombie_4.png" type="Texture" id=20]
 [ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/THINBL3.png" type="Texture" id=21]
-[ext_resource path="res://NPCs/globalsprites/skeleton_4.png" type="Texture" id=22]
-[ext_resource path="res://NPCs/globalsprites/skeleton_1.png" type="Texture" id=23]
-[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG3.png" type="Texture" id=24]
-[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/Fatbl3.png" type="Texture" id=25]
-[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/THINBL4.png" type="Texture" id=26]
-[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/Fatbl2.png" type="Texture" id=27]
-[ext_resource path="res://NPCs/globalsprites/skeleton_3.png" type="Texture" id=28]
-[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG2.png" type="Texture" id=29]
-[ext_resource path="res://NPCs/globalsprites/skeleton_2.png" type="Texture" id=30]
-[ext_resource path="res://NPCs/globalsprites/skeleton_0.png" type="Texture" id=31]
-[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=32]
-[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=33]
-[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=34]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/THINBL2.png" type="Texture" id=22]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/THINBL4.png" type="Texture" id=23]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/FatBl1.png" type="Texture" id=24]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/Fatbl4.png" type="Texture" id=25]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/Fatbl2.png" type="Texture" id=26]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/Fatbl3.png" type="Texture" id=27]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/THINBL1.png" type="Texture" id=28]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG3.png" type="Texture" id=29]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG1.png" type="Texture" id=30]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG4.png" type="Texture" id=31]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/HOTBBG2.png" type="Texture" id=32]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine6.png" type="Texture" id=33]
+[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=34]
 [ext_resource path="res://NPCs/globalsprites/octopus_5.png" type="Texture" id=35]
-[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=36]
+[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=36]
 [ext_resource path="res://NPCs/globalsprites/octopus_1.png" type="Texture" id=37]
+[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=38]
+[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=39]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine_3.png" type="Texture" id=40]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine_2.png" type="Texture" id=41]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine.png" type="Texture" id=42]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine_4.png" type="Texture" id=43]
+[ext_resource path="res://NPCs/DarkBowlerhatGuy/sprite/vaccine_5.png" type="Texture" id=44]
+[ext_resource path="res://NPCs/globalsprites/frog_1.png" type="Texture" id=45]
+[ext_resource path="res://NPCs/globalsprites/frog_0.png" type="Texture" id=46]
+[ext_resource path="res://NPCs/globalsprites/frog_5.png" type="Texture" id=47]
+[ext_resource path="res://NPCs/globalsprites/frog_3.png" type="Texture" id=48]
+[ext_resource path="res://NPCs/globalsprites/frog_4.png" type="Texture" id=49]
+[ext_resource path="res://NPCs/globalsprites/frog_2.png" type="Texture" id=50]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -55,6 +68,11 @@ animations = [ {
 "name": "cured",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 46 ), ExtResource( 45 ), ExtResource( 50 ), ExtResource( 48 ), ExtResource( 49 ), ExtResource( 47 ) ],
+"loop": true,
+"name": "frog",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 39 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 38 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "octopus",
@@ -70,9 +88,14 @@ animations = [ {
 "name": "thin",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 32 ), ExtResource( 37 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 36 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "octopus",
+"name": "fat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 32 ), ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "hot",
 "speed": 5.0
 } ]
 
@@ -84,7 +107,9 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "octopus"
+animation = "frog"
+speed_scale = 3.0
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -9.20132, 4.23261 )

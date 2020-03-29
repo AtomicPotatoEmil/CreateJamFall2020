@@ -10,7 +10,8 @@ var RedLady_Dialogue = {
 	"hot": "I’m a perfect 5/7!",
 	"goop": "I guess your heart desired goop",
 	"octopus": "To some people this is considered attractive",
-	"cured": "I feel like a firefly!"
+	"cured": "I feel like a firefly!",
+	"frog": "Well quak fucking quak i guess"
 }
 
 var Heiress_Dialogue = {
@@ -22,7 +23,8 @@ var Heiress_Dialogue = {
 	"thin": "Oh yeah! Skinny as a supermodel",
 	"hot": "I can barely balance myself now!",
 	"goop": "I guess your heart desired goop",
-	"cured": "I feel like a firefly!"
+	"cured": "I feel like a firefly!",
+	"frog": "Well quak fucking quak i guess"
 }
 
 var Singer_Dialogue = {
@@ -34,7 +36,8 @@ var Singer_Dialogue = {
 	"hot": "I’m a perfect 5/7!",
 	"goop": "I guess your heart desired goop",
 	"octopus": "To some people this is considered attractive",
-	"cured": "I feel like a firefly!"
+	"cured": "I feel like a firefly!",
+	"frog": "Well quak fucking quak i guess"
 }
 
 var DarkBowlerhatGuy_Dialogue = {
@@ -47,7 +50,8 @@ var DarkBowlerhatGuy_Dialogue = {
 	"hot": "I’m a perfect 5/7!",
 	"goop": "I guess your heart desired goop",
 	"octopus": "To some people this is considered attractive",
-	"cured": "I feel like a firefly!"
+	"cured": "I feel like a firefly!",
+	"frog": "Well quak fucking quak i guess"
 }
 
 var LightBowlerhatGuy_Dialogue = {
@@ -59,5 +63,6 @@ var LightBowlerhatGuy_Dialogue = {
 	"hot": "I’m a perfect 5/7!",
 	"goop": "I guess your heart desired goop",
 	"octopus": "To some people this is considered attractive",
-	"cured": "I feel like a firefly!"
+	"cured": "I feel like a firefly!",
+	"frog": "Well quak fucking quak i guess"
 }

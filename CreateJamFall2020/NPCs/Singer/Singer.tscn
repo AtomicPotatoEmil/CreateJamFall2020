@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://NPCs/Singer/sprites/SingerIdle1.png" type="Texture" id=1]
 [ext_resource path="res://NPCs/Singer/sprites/SingerIdle3.png" type="Texture" id=2]
@@ -20,18 +20,23 @@
 [ext_resource path="res://NPCs/Singer/sprites/Singer2enc.png" type="Texture" id=18]
 [ext_resource path="res://NPCs/Singer/sprites/Singer3ENC.png" type="Texture" id=19]
 [ext_resource path="res://NPCs/Singer/sprites/Singer1ENC.png" type="Texture" id=20]
-[ext_resource path="res://NPCs/globalsprites/skeleton_5.png" type="Texture" id=21]
-[ext_resource path="res://NPCs/globalsprites/skeleton_4.png" type="Texture" id=22]
-[ext_resource path="res://NPCs/globalsprites/skeleton_1.png" type="Texture" id=23]
-[ext_resource path="res://NPCs/globalsprites/skeleton_3.png" type="Texture" id=24]
-[ext_resource path="res://NPCs/globalsprites/skeleton_2.png" type="Texture" id=25]
-[ext_resource path="res://NPCs/globalsprites/skeleton_0.png" type="Texture" id=26]
-[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=27]
-[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=28]
-[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=29]
-[ext_resource path="res://NPCs/globalsprites/octopus_5.png" type="Texture" id=30]
-[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=31]
-[ext_resource path="res://NPCs/globalsprites/octopus_1.png" type="Texture" id=32]
+[ext_resource path="res://NPCs/Singer/sprites/curedSingerIdle5.png" type="Texture" id=21]
+[ext_resource path="res://NPCs/globalsprites/octopus_2.png" type="Texture" id=22]
+[ext_resource path="res://NPCs/globalsprites/octopus_5.png" type="Texture" id=23]
+[ext_resource path="res://NPCs/globalsprites/octopus_3.png" type="Texture" id=24]
+[ext_resource path="res://NPCs/globalsprites/octopus_1.png" type="Texture" id=25]
+[ext_resource path="res://NPCs/globalsprites/octopus_4.png" type="Texture" id=26]
+[ext_resource path="res://NPCs/Singer/sprites/curedSingerIdle2.png" type="Texture" id=27]
+[ext_resource path="res://NPCs/Singer/sprites/curedSingerIdle3.png" type="Texture" id=28]
+[ext_resource path="res://NPCs/Singer/sprites/curedSingerIdle1.png" type="Texture" id=29]
+[ext_resource path="res://NPCs/Singer/sprites/curedSingerIdle4.png" type="Texture" id=30]
+[ext_resource path="res://NPCs/globalsprites/octopus_0.png" type="Texture" id=31]
+[ext_resource path="res://NPCs/globalsprites/frog_1.png" type="Texture" id=32]
+[ext_resource path="res://NPCs/globalsprites/frog_0.png" type="Texture" id=33]
+[ext_resource path="res://NPCs/globalsprites/frog_5.png" type="Texture" id=34]
+[ext_resource path="res://NPCs/globalsprites/frog_3.png" type="Texture" id=35]
+[ext_resource path="res://NPCs/globalsprites/frog_4.png" type="Texture" id=36]
+[ext_resource path="res://NPCs/globalsprites/frog_2.png" type="Texture" id=37]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -50,6 +55,11 @@ animations = [ {
 "name": "cured",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 33 ), ExtResource( 32 ), ExtResource( 37 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "frog",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 31 ), ExtResource( 25 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "octopus",
@@ -60,9 +70,14 @@ animations = [ {
 "name": "zombie",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 32 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 31 ), ExtResource( 30 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
 "loop": true,
-"name": "octopus",
+"name": "fat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "hot",
 "speed": 5.0
 } ]
 
@@ -74,8 +89,9 @@ script = ExtResource( 7 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "octopus"
-frame = 5
+animation = "frog"
+speed_scale = 3.0
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.83517, 4.68987 )
