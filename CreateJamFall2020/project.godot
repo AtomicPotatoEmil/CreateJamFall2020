@@ -23,6 +23,7 @@ config/icon="res://icon.png"
 
 Potion="*res://Potion.gd"
 GameState="*res://GameState/GameState.gd"
+Dialogue="*res://GameState/Dialogue.gd"
 
 [display]
 
