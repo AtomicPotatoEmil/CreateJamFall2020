@@ -9,15 +9,15 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if GameState.LightBowlerhatGuy == "normal":
+	if GameState.LightBowlerhatGuy_status == "normal":
 		$AnimatedSprite.play("normal")
-	if GameState.LightBowlerhatGuy == "zombie":
+	if GameState.LightBowlerhatGuy_status == "zombie":
 		$AnimatedSprite.play("zombie")
-	if GameState.LightBowlerhatGuy == "fat":
+	if GameState.LightBowlerhatGuy_status == "fat":
 		$AnimatedSprite.play("fat")
-	if GameState.LightBowlerhatGuy == "hot":
+	if GameState.LightBowlerhatGuy_status == "hot":
 		$AnimatedSprite.play("hot")
-	if GameState.LightBowlerhatGuy == "skinny":
+	if GameState.LightBowlerhatGuy_status == "skinny":
 		$AnimatedSprite.play("skinny")
 	
 	if $RayCast2D.is_colliding() == false:
