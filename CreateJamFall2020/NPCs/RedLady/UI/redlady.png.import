@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/heiress1idle.png-813beffe55cc53199aaa2ada62da258a.stex"
+path="res://.import/redlady.png-42636592859cc12c51ef52751656c464.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://NPCs/Heiress/heiress1idle.png"
-dest_files=[ "res://.import/heiress1idle.png-813beffe55cc53199aaa2ada62da258a.stex" ]
+source_file="res://NPCs/RedLady/UI/redlady.png"
+dest_files=[ "res://.import/redlady.png-42636592859cc12c51ef52751656c464.stex" ]
 
 [params]
 

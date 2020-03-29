@@ -74,3 +74,6 @@ position = Vector2( 10.5886, 271.231 )
 rotation = -1.5708
 enabled = true
 cast_to = Vector2( 0, 60 )
+
+[node name="DoorSpawnPoint" type="Position2D" parent="."]
+position = Vector2( 77.3783, 247.611 )

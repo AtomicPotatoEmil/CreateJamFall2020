@@ -5,6 +5,8 @@ onready var GameState = get_node("/root/GameState")
 func _ready():
 	if GameState.player_position == "Table":
 		$Player.global_position = $TableSpawnPoint.global_position
+	if GameState.player_position == "Workshop Door":
+		$Player.position = $DoorSpawnPoint.global_position
 	$AudioStreamPlayer.play()
 	pass
 
@@ -27,6 +29,6 @@ func _physics_process(delta):
 			$Door/W.show()
 	
 	if $Door/RayCast2D.is_colliding():
-		if $Door/RayCast2D.get_collider().is_in_group("player") and Input.is_action_pressed("W"):
+		if $Door/RayCast2D.get_collider().is_in_group("player") and Input.is_action_just_pressed("W"):
 			get_tree().change_scene("res://MainRoom/MainRoom.tscn")
 	pass

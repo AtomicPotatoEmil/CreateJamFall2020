@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://NPCs/RedLady/sprites/RedLadyIdle1.png" type="Texture" id=1]
 [ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=2]
@@ -10,6 +10,12 @@
 [ext_resource path="res://NPCs/RedLady/sprites/fineblondladyzombie_4.png" type="Texture" id=8]
 [ext_resource path="res://NPCs/RedLady/sprites/fineblondladyzombie_3.png" type="Texture" id=9]
 [ext_resource path="res://NPCs/RedLady/sprites/fineblondladyzombie_5.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyFat2.png" type="Texture" id=11]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyTHIN1.png" type="Texture" id=12]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyFAT1.png" type="Texture" id=13]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyTHIN2.png" type="Texture" id=14]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyHOT1.png" type="Texture" id=15]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyHOT2.png" type="Texture" id=16]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,7 +24,22 @@ animations = [ {
 "name": "normal",
 "speed": 3.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "fat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "skinny",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "hot",
+"speed": 3.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "zombie",
 "speed": 5.0
@@ -32,8 +53,8 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "zombie"
-frame = 3
+animation = "normal"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
