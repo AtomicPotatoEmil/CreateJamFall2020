@@ -9,6 +9,9 @@ var interactable = true
 var numberOfItemsClicked = 0
 
 func _ready():
+	
+	GameState.player_position = "Table"
+	POTION.EFFECT = "EMPTY"
 	if GameState.first_time_potion == true:
 		interactable = false
 	$PotionBottle/TextureProgress.max_value = 0
@@ -19,6 +22,10 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	
+	if numberOfItemsClicked == 3:
+		get_tree().change_scene("res://WizardWorksShop/WizardWorkshop.tscn")
+	
 	print(POTION.EFFECT)
 	pass
 	

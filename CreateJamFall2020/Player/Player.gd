@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var GameState = get_node("/root/GameState")
 
-var GRAVITY = 40
+var GRAVITY = 600
 var SPEED = 100
 var VELOCITY = Vector2()
 

@@ -1,0 +1,59 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://NPCs/Singer/sprites/SingerIdle1.png" type="Texture" id=1]
+[ext_resource path="res://NPCs/Singer/sprites/SingerIdle3.png" type="Texture" id=2]
+[ext_resource path="res://NPCs/Singer/sprites/SingerIdle4.png" type="Texture" id=3]
+[ext_resource path="res://NPCs/Singer/sprites/SingerIdle5.png" type="Texture" id=4]
+[ext_resource path="res://NPCs/Singer/sprites/SingerIdle2.png" type="Texture" id=5]
+[ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=6]
+[ext_resource path="res://NPCs/Singer/Singer.gd" type="Script" id=7]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_1.png" type="Texture" id=8]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_0.png" type="Texture" id=9]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_3.png" type="Texture" id=10]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_4.png" type="Texture" id=11]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_5.png" type="Texture" id=12]
+[ext_resource path="res://NPCs/Singer/sprites/bigladyzombie_2.png" type="Texture" id=13]
+[ext_resource path="res://NPCs/Singer/sprites/Singer1FAT.png" type="Texture" id=14]
+[ext_resource path="res://NPCs/Singer/sprites/Singer2FAT.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "normal",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "fat",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "zombie",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 30.8497
+
+[node name="Singer" type="Area2D"]
+script = ExtResource( 7 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "fat"
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.83517, 4.68987 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2( 0.407814, 3.05861 )
+enabled = true
+
+[node name="PressSpace" type="Sprite" parent="."]
+position = Vector2( 18.3517, -27.7314 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )

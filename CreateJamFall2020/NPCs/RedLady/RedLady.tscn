@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyIdle1.png" type="Texture" id=1]
+[ext_resource path="res://UI_elements/spacebarkeyboard.png" type="Texture" id=2]
+[ext_resource path="res://NPCs/RedLady/sprites/RedLadyIdle2.png" type="Texture" id=3]
+[ext_resource path="res://NPCs/RedLady/RedLady.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "normal",
+"speed": 3.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 37.0226
+
+[node name="RedLady" type="Area2D"]
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "normal"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.858559, 5.58063 )
+shape = SubResource( 2 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = 1.5708
+enabled = true
+cast_to = Vector2( 0, 20 )
+
+[node name="PressSpace" type="Sprite" parent="."]
+position = Vector2( 16.6084, -31.0577 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
