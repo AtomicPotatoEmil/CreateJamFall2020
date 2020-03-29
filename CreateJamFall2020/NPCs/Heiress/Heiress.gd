@@ -9,15 +9,15 @@ func _ready():
 	pass
 
 func _physics_process(delta):
-	if GameState.Heiress == "normal":
+	if GameState.Heiress_status == "normal":
 		$AnimatedSprite.play("normal")
-	if GameState.Heiress == "zombie":
+	if GameState.Heiress_status == "zombie":
 		$AnimatedSprite.play("zombie")
-	if GameState.Heiress == "fat":
+	if GameState.Heiress_status == "fat":
 		$AnimatedSprite.play("fat")
-	if GameState.Heiress == "hot":
+	if GameState.Heiress_status == "hot":
 		$AnimatedSprite.play("hot")
-	if GameState.Heiress == "skinny":
+	if GameState.Heiress_status == "skinny":
 		$AnimatedSprite.play("skinny")
 	
 	if $RayCast2D.is_colliding() == false:
